@@ -1,2 +1,7 @@
+# Node modules
 /node_modules
+#Enviormental Variable: file will not want API keys on a repo
 .env
+
+#misc
+.DS_Store
