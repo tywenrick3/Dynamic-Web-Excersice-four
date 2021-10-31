@@ -2,11 +2,10 @@ const express = require('express');
 
 const router = express.Router();
 
-//Get all articles from firebase
 router.get('/', (req, res) => {
 	res.send(`
-    <h1>All Articles</h1>
-    <p> Articles comming soon... need to setup firebase</p>
+        <h1>Individual Article</h1>
+        <p>A single article will go here...</p>
     `);
 });
 
