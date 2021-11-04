@@ -20,7 +20,6 @@ router.get('/:id', (req, res) => {
 		.catch((error) => {
 			res.send(`error: ${error}`);
 		});
-	res.send();
 });
 
 router.get('/', (req, res) => {
