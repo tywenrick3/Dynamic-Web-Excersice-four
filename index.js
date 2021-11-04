@@ -1,7 +1,7 @@
 const express = require('express');
 
 const app = express();
-
+//set port dynamically with heroku
 const port = process.env.PORT || 4000;
 
 //import firebase
