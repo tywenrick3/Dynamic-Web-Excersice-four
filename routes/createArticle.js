@@ -34,7 +34,7 @@ const form = `
         <button type="submit">Submit Article</button>
     </form>
 `;
-//Require Firebase
+//Require Firestore
 const firestore = require('firebase/firestore');
 //Reference DB
 const db = firestore.getFirestore();
