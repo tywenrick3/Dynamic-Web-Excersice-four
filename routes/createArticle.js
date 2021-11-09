@@ -48,10 +48,30 @@ router.get('/submit', (req, res) => {
 	const title = queryParams.articleTitle;
 	const text = queryParams.articleText;
 	const author = queryParams.author;
-
 	// Create ID from title
 	const idFromTitle = title.replace(/\s+/g, '-').toLowerCase();
 	// Submit post to Firebase
+	const setBlogPost = firestore.setDoc(
+		firestore.doc(db, 'blogposts', idFromTitle),
+		{
+			title,
+			text,
+			author,
+		}
+	);
+
+	setBlogPost
+		.then((response) => {
+			console.log('success');
+			res.send(`
+                <h1>Submission Successful</h1>
+                <p><a href="/create">Add Another Post</a></p>
+            `);
+		})
+		.catch((error) => {
+			console.warn(error);
+			res.send(`Error Submitting: ${error.toString()}`);
+		});
 
 	// If post successful, show
 	console.log({ idFromTitle, title, text, author });
