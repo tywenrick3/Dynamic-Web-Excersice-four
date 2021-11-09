@@ -21,7 +21,7 @@ firebase.initializeApp(firebaseConfig);
 //Routes for directing user to correct place
 const indexRoute = require('./routes/index');
 const articleRoute = require('./routes/article');
-const createArticleRoute = require('./routes/create');
+const createArticleRoute = require('./routes/createArticle');
 
 app.use('/', indexRoute);
 app.use('/article', articleRoute);
